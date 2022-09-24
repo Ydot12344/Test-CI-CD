@@ -8,9 +8,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
-        repository: Ydot12344/Test-CI-CD.git
-        token: ${{ secrets.GIT_SECRET }}
     - name: Run CMake
       run: cmake -P {0}
     - name: Build & Tests
