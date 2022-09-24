@@ -2,9 +2,6 @@ name: Build main
 
 on: [push]
 
-strategy:
-  matrix:
-    compiler: [gcc, clang]
 jobs:
   build:
     
@@ -13,6 +10,6 @@ jobs:
     steps:
     - uses: action/checkout@v1
     - name: Run CMake
-      env:
-        CC: ${{ matrix.compiler }}
       run: cmake -P {0}
+    - name: Build & Tests
+      run: make all test
