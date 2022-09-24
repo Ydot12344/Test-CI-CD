@@ -4,11 +4,12 @@ on: [push]
 
 jobs:
   build:
-    
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
 
     steps:
-    - uses: action/checkout@v2
+    - uses: action/checkout@v3
     - name: Run CMake
       run: cmake -P {0}
     - name: Build & Tests
