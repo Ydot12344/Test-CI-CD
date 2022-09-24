@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: action/checkout@v1
+    - uses: action/checkout@main
     - name: Run CMake
       run: cmake -P {0}
     - name: Build & Tests
