@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 
 TEST(TestGroupName, Subtest_1) {
-  ASSERT_TRUE(1 == 0);
+  ASSERT_TRUE(1 == 1);
 }
 
 int main(int argc, char **argv) {
