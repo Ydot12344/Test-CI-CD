@@ -7,9 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: action/checkout@v3
-      with:
-        repo-token: ${{ secrets.GIT_SECRET }}
+    - uses: action/checkout
     - name: Run CMake
       run: cmake -P {0}
     - name: Build & Tests
