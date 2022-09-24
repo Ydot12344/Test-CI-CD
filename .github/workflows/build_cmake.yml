@@ -4,12 +4,12 @@ on: [push]
 
 jobs:
   build:
-    permissions:
-      contents: read
     runs-on: ubuntu-latest
 
     steps:
     - uses: action/checkout@v3
+      with:
+        repo-token: ${{ secrets.GIT_SECRET }}
     - name: Run CMake
       run: cmake -P {0}
     - name: Build & Tests
